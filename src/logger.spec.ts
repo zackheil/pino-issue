@@ -15,8 +15,8 @@ describe('Logger:', () => {
 
         test('should log to custom destination', () => {
             const level = 'info'; // implied default
-            const log = new Logger({ destination: { write } });
-            log.info('hello')
+            const log = new Logger({ level: 'info', destination: { write } });
+            log.info('hello');
             
             expect(outStr).toBeDefined();
         });
