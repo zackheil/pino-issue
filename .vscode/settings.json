@@ -1,0 +1,21 @@
+{
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules", "**/dist", "**/build"],
+  "vsicons.associations.folders": [
+    { "icon": "private", "extensions": ["errors"], "format": "svg" },
+    { "icon": "include", "extensions": ["global"], "format": "svg" },
+    { "icon": "json", "extensions": ["inputs"], "format": "svg" }
+  ]
+}

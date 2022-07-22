@@ -1,0 +1,26 @@
+name: PR Checks
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    paths: ["**.ts", "**.js", "**/package*.json"]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup and Node Project
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install NPM Dependencies
+        run: npm run prime
+      - name: Ensure Project Builds
+        run: npm run build
+      - name: Run Unit Tests
+        run: npm run test
