@@ -1,7 +1,7 @@
 {
   "name": "pino-issue",
   "version": "0.0.0",
-  "description": "n/a",
+  "description": "extracted from codebase",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
