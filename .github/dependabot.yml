@@ -2,7 +2,6 @@ version: 2
 updates:
   # Root package.json
   - package-ecosystem: "npm"
-    target-branch: "dependabot-staging"
     directory: "./"
     schedule:
       interval: "daily"
