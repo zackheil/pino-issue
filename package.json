@@ -37,6 +37,6 @@
     "@typescript-eslint/parser": "^5.30.6"
   },
   "dependencies": {
-    "pino": "^8.2.0"
+    "pino": "^8.5.0"
   }
 }
