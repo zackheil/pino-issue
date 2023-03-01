@@ -1,5 +1,5 @@
 import type { P } from 'pino';
-import { default as Pino } from 'pino';
+import { pino } from 'pino';
 
 type LoggingOptions = {
     level: P.LevelWithSilent;
@@ -9,7 +9,7 @@ type LoggingOptions = {
 export class Logger {
     private _logger: P.Logger;
     constructor(config?: LoggingOptions) {
-        this._logger = Pino({ ...config }, config?.destination!);
+        this._logger = pino({ ...config }, config?.destination!);
     }
 
     public info(message: string | Record<string, unknown> | Error, ...args: any[]): void {
